@@ -14,6 +14,25 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        
+        //Simpson class object
+       /* let homer = Simpson()
+        homer.name = "Homer"
+        homer.job = "Nuclear Safety"
+        homer.image = UIImage (named: "Homer_Simpson")! */
+        
+        let homer = Simpson(simpsonName: "Homer Simpson", simpsonJob: "Nuclear Safety", simpsonImage: UIImage(named: "Homer_Simpson")!)
+        
+        let marge = Simpson(simpsonName: "Marge Simpson", simpsonJob: "Housewife", simpsonImage: UIImage(named: "marge")!)
+               
+        let bart = Simpson(simpsonName: "Bart Simpson", simpsonJob: "Student", simpsonImage: UIImage(named: "bart")!)
+               
+        let lisa = Simpson(simpsonName: "Lisa Simpson", simpsonJob: "Student", simpsonImage: UIImage(named: "Lisa_Simpson")!)
+               
+        let maggie = Simpson(simpsonName: "Maggie Simpson", simpsonJob: "Baby", simpsonImage: UIImage(named: "Maggie_Simspson")!)
+        //Simpson Array
+        let homeArray = [homer,marge,bart,lisa, maggie]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
