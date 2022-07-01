@@ -8,8 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource{
-
     @IBOutlet weak var tableView: UITableView!
+    
+    var mySimpson = [Simpson]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -30,18 +32,25 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                
         let lisa = Simpson(simpsonName: "Lisa Simpson", simpsonJob: "Student", simpsonImage: UIImage(named: "Lisa_Simpson")!)
                
-        let maggie = Simpson(simpsonName: "Maggie Simpson", simpsonJob: "Baby", simpsonImage: UIImage(named: "Maggie_Simspson")!)
+        let maggie = Simpson(simpsonName: "Maggie Simpson", simpsonJob: "Baby", simpsonImage: UIImage(named: "Maggie_Simpson")!)
+        
         //Simpson Array
-        let homeArray = [homer,marge,bart,lisa, maggie]
+        //let homeArray = [homer,marge,bart,lisa, maggie]
+        
+        mySimpson.append(homer)
+        mySimpson.append(marge)
+        mySimpson.append(bart)
+        mySimpson.append(lisa)
+        mySimpson.append(maggie)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return mySimpson.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Homer Simpson"
+        cell.textLabel?.text = mySimpson[indexPath.row].name
         return cell
     }
 }

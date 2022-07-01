@@ -44,7 +44,6 @@
 		88828F6F286A26F900B5973D = {
 			isa = PBXGroup;
 			children = (
-				88ABADE2286F11490036F2C5 /*  Simpson.swift */,
 				88828F7A286A26F900B5973D /* SimpsonBook */,
 				88828F79286A26F900B5973D /* Products */,
 			);
@@ -61,6 +60,7 @@
 		88828F7A286A26F900B5973D /* SimpsonBook */ = {
 			isa = PBXGroup;
 			children = (
+				88ABADE2286F11490036F2C5 /*  Simpson.swift */,
 				88828F7B286A26F900B5973D /* AppDelegate.swift */,
 				88828F7D286A26F900B5973D /* SceneDelegate.swift */,
 				88828F7F286A26F900B5973D /* ViewController.swift */,
